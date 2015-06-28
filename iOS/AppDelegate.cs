@@ -1,6 +1,6 @@
 ﻿using Foundation;
 using UIKit;
-using MVVMlight.iOS.ViewModel;
+using MVVMlight;
 
 namespace MVVMlight.iOS
 {

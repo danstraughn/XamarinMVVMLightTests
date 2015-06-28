@@ -1,16 +1,13 @@
-﻿using System;
-
+﻿
 using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using Android.OS;
+using GalaSoft.MvvmLight.Helpers;
 
 namespace MVVMlight.Droid
 {
-	[Activity (Label = "MVVMlight.Droid", MainLauncher = true, Icon = "@drawable/icon")]
-	public class MainActivity : Activity
+	
+	public partial class MainActivity : Activity
 	{
 		int count = 1;
 
@@ -28,6 +25,28 @@ namespace MVVMlight.Droid
 			button.Click += delegate {
 				button.Text = string.Format ("{0} clicks!", count++);
 			};
+			TxtNewText.KeyPress += (sender, e) => {
+			};
+			TxtNewText.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
+			};
+			this.SetBinding (() => TxtNewText.Text, () => MainApp.ViewModelLocator.Main.Text, BindingMode.OneWay);
+			this.SetBinding (() => MainApp.ViewModelLocator.Main.Text, () => LblResult.Text, BindingMode.OneWay);
+			this.SetBinding (() => MainApp.ViewModelLocator.Main.Text, () => LblAutoUpdate.Text, BindingMode.OneWay);
+//			this.SetBinding (() => MainApp.ViewModelLocator.Main.Text)
+//				.WhenSourceChanges (() => LblAutoUpdate.Text = MainApp.ViewModelLocator.Main.Text);
+//
+//			this.SetBinding (
+//				() => this.TxtNewText.Text)
+//				.UpdateSourceTrigger ("KeyPress")
+//				.WhenSourceChanges (() => MainApp.ViewModelLocator.Main.Text = this.TxtNewText.Text);
+//
+//			this.SetBinding (
+//				() => this.TxtNewText.Text)
+//				.UpdateSourceTrigger ("TextChanged")
+//				.WhenSourceChanges (() => {
+//				LblResult.Text = MainApp.ViewModelLocator.Main.Text;
+//			});
+			
 		}
 	}
 }

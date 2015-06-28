@@ -1,5 +1,4 @@
 ﻿using System;
-		
 using UIKit;
 using GalaSoft.MvvmLight.Helpers;
 
@@ -44,7 +43,6 @@ namespace MVVMlight.iOS
 			};
 			var g = new UITapGestureRecognizer (() => View.EndEditing (true));
 			g.CancelsTouchesInView = false;
-			//for iOS5
 			View.AddGestureRecognizer (g);
 		}
 
@@ -69,6 +67,14 @@ namespace MVVMlight.iOS
 				UpdateLabelOnReturn.Text = AppDelegate.ViewModelLocator.Main.Text;
 			});
 
+		}
+
+		public override void ViewWillDisappear (bool animated)
+		{
+			base.ViewWillDisappear (animated);
+			TextBindingField = null;
+			TextBinding = null;
+			TextChangedBinding = null;
 		}
 
 		public override void DidReceiveMemoryWarning ()
