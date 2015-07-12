@@ -157,7 +157,5 @@ $RECYCLE.BIN/
 .DS_Store
 /packages
 /Components
-ProjectFido.userprefs 
 *.apk
-/PullToRefresharp.Android/packages.config
-/Fido.UITests/packages
+
