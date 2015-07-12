@@ -15,8 +15,9 @@
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
+using MVVMlight.Shared.ViewModels;
 
-namespace MVVMlight
+namespace MVVMlight.Shared
 {
 	/// <summary>
 	/// This class contains static references to all the view models in the
@@ -43,12 +44,17 @@ namespace MVVMlight
 			////}
 
 			SimpleIoc.Default.Register<MainViewModel> ();
+			SimpleIoc.Default.Register<PhotoViewModel> ();
 		}
 
 		public MainViewModel Main {
 			get {
 				return ServiceLocator.Current.GetInstance<MainViewModel> ();
 			}
+		}
+
+		public PhotoViewModel PhotoVM {
+			get{ return ServiceLocator.Current.GetInstance <PhotoViewModel> (); }
 		}
 
 		public static void Cleanup ()

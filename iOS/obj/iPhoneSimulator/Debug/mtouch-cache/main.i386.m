@@ -10,6 +10,7 @@ void xamarin_register_assemblies ()
 {
 	xamarin_open_and_register ("Xamarin.iOS.dll");
 	xamarin_open_and_register ("GalaSoft.MvvmLight.Platform.dll");
+	xamarin_open_and_register ("SDWebImage.dll");
 
 }
 

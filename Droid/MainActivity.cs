@@ -29,9 +29,9 @@ namespace MVVMlight.Droid
 			};
 			TxtNewText.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
 			};
-			this.SetBinding (() => TxtNewText.Text, () => MainApp.ViewModelLocator.Main.Text, BindingMode.OneWay);
-			this.SetBinding (() => MainApp.ViewModelLocator.Main.Text, () => LblResult.Text, BindingMode.OneWay);
-			this.SetBinding (() => MainApp.ViewModelLocator.Main.Text, () => LblAutoUpdate.Text, BindingMode.OneWay);
+			this.SetBinding (() => TxtNewText.Text, () => MainApp.ViewModelLocator.Main.BindableText, BindingMode.OneWay);
+			this.SetBinding (() => MainApp.ViewModelLocator.Main.BindableText, () => LblResult.Text, BindingMode.OneWay);
+			this.SetBinding (() => MainApp.ViewModelLocator.Main.BindableText, () => LblAutoUpdate.Text, BindingMode.OneWay);
 //			this.SetBinding (() => MainApp.ViewModelLocator.Main.Text)
 //				.WhenSourceChanges (() => LblAutoUpdate.Text = MainApp.ViewModelLocator.Main.Text);
 //

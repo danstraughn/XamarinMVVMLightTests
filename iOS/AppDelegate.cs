@@ -1,6 +1,7 @@
 ﻿using Foundation;
 using UIKit;
 using MVVMlight;
+using MVVMlight.Shared;
 
 namespace MVVMlight.iOS
 {
@@ -16,6 +17,8 @@ namespace MVVMlight.iOS
 			set;
 		}
 
+		public static UIWindow Root { get; set; }
+
 		public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 		{
 			// Override point for customization after application launch.
@@ -25,7 +28,10 @@ namespace MVVMlight.iOS
 			#if ENABLE_TEST_CLOUD
 			Xamarin.Calabash.Start ();
 			#endif
-
+			Window = new UIWindow (UIScreen.MainScreen.Bounds);
+			Root = Window;
+			Root.RootViewController = CustomNavigation;
+			Window.MakeKeyAndVisible ();
 			return true;
 		}
 
@@ -33,6 +39,12 @@ namespace MVVMlight.iOS
 
 		public static ViewModelLocator ViewModelLocator {
 			get { return s_ViewModelLocator ?? (s_ViewModelLocator = new ViewModelLocator ()); }
+		}
+
+		private static CustomNavigationController m_CustomNavigation;
+
+		public static CustomNavigationController CustomNavigation {
+			get{ return m_CustomNavigation ?? (m_CustomNavigation = new CustomNavigationController (new MainViewController ())); }
 		}
 
 		public override void OnResignActivation (UIApplication application)

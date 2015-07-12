@@ -9,7 +9,15 @@
     <Import_RootNamespace>MVVMlight</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)MainViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModelLocator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\JsonService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PhotoModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PhotoViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
   </ItemGroup>
 </Project>

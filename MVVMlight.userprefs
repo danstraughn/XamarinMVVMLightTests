@@ -1,19 +1,50 @@
 ﻿<Properties StartupItem="iOS/MVVMlight.iOS.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="Android.SelectDevice" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/MainActivity.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6.8.4" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MVVMlight/ViewModels/MainViewModel.cs">
     <Files>
-      <File FileName="iOS/ViewController.cs" Line="1" Column="1" />
       <File FileName="../../MVVMlight/iOS/ViewModel/ViewModelLocator.cs" Line="1" Column="1" />
       <File FileName="../../MVVMlight/iOS/ViewModel/MainViewModel.cs" Line="1" Column="1" />
-      <File FileName="iOS/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="iOS/ViewModel/MainViewModel.cs" Line="1" Column="1" />
-      <File FileName="MVVMlight/MainViewModel.cs" Line="19" Column="34" />
-      <File FileName="Droid/MainActivity.cs" Line="5" Column="15" />
+      <File FileName="Droid/MainActivity.cs" Line="1" Column="1" />
       <File FileName="Droid/packages.config" Line="1" Column="1" />
+      <File FileName="MVVMlight/ViewModelLocator.cs" Line="1" Column="1" />
+      <File FileName="Droid/MainApp.cs" Line="1" Column="1" />
+      <File FileName="MVVMlight/Models/PhotoModel.cs" Line="30" Column="3" />
+      <File FileName="MVVMlight/ViewModels/MainViewModel.cs" Line="103" Column="38" />
+      <File FileName="iOS/NavigationControllers/CustomNavigationController~ipad.xib" Line="7" Column="131" />
+      <File FileName="iOS/NavigationControllers/CustomNavigationController~iphone.xib" Line="7" Column="131" />
+      <File FileName="MVVMlight/ViewModels/PhotoViewModel.cs" Line="10" Column="20" />
+      <File FileName="iOS/ViewControllers/MainViewController.cs" Line="1" Column="1" />
+      <File FileName="iOS/ViewControllers/TableViewController.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MVVMlight" expanded="True">
+            <Node name="MVVMlight.iOS" expanded="True">
+              <Node name="NavigationControllers" expanded="True" />
+              <Node name="ViewControllers" expanded="True" />
+            </Node>
+            <Node name="MVVMlight.Shared" expanded="True">
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="MainViewModel.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="MVVMlight" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/daniel.straughn/Desktop/XamarinMVVMLightTests/Droid/MainActivity.cs" line="19" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.MVVMlight.Droid AndroidDesignerPreferredDevice="Nexus 4" />
